@@ -41,3 +41,27 @@ atlag_eletkor = ossz_eletkor / autok_szama
 
 print(f'Az autók átlagéletkora: {atlag_eletkor} év')
 
+legidosebb_auto = None
+legidosebb_auto_kora = 0
+
+for auto in autok:
+    kor = 2026 - auto.gyartasi_ev
+    if kor > legidosebb_auto_kora:
+        legidosebb_auto_kora = kor
+        legidosebb_auto = auto
+
+print(f'A legidősebb autó kora: {legidosebb_auto_kora} ')
+print(f'A legidősebb autó adatai: {legidosebb_auto} ')
+
+
+# Hrdcore
+
+# gyartasi_evek = []
+
+# for auto in autok:
+#     gyartasi_evek.append(auto.gyartasi_ev)
+# gyartasi_evek = [auto.gyartasi_ev for auto in autok]
+
+# for auto in autok:
+#     if auto.gyartasi_ev == min(gyartasi_evek):
+#         print(f'A legidősebb autó adatai: {auto}')
