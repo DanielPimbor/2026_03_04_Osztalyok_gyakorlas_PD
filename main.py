@@ -6,3 +6,7 @@ auto2 = Auto('Ford','Focus',2018)
 print(auto1)
 # print(auto1.marka)
 print(auto2)
+
+auto1.gyorsit(150)
+
+print(auto1)
