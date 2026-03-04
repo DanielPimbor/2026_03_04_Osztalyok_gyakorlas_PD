@@ -6,6 +6,7 @@ auto2 = Auto('Ford','Focus',2018)
 auto3 = Auto('Audi','E-Tron GT',2020)
 auto4 = Auto('Ford','Mustang',2008)
 
+
 # print(auto1)
 # # print(auto1.marka)
 # print(auto2)
@@ -65,3 +66,10 @@ print(f'A legidősebb autó adatai: {legidosebb_auto} ')
 # for auto in autok:
 #     if auto.gyartasi_ev == min(gyartasi_evek):
 #         print(f'A legidősebb autó adatai: {auto}')
+
+auto_6=Auto('BMW', '320d', 2019, 6.5)
+print(auto_6)
+auto_6.utazik(200)
+print(auto_6)
+auto_6.tankol(10)
+print(auto_6)

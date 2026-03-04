@@ -8,7 +8,8 @@ class Auto:
         self.uzemanyag= uzemanyag_
     
     def __str__(self):
-        return f'{self.marka} {self.tipus} ({self.gyartasi_ev}) sebesség: {self.sebesseg} km/h'
+        return f'{self.marka} {self.tipus} ({self.gyartasi_ev}),\
+        sebesség: {self.sebesseg} km/h, üzemanyag {self.uzemanyag}'
     
     def gyorsit(self, ertek):
         self.sebesseg += ertek
@@ -29,3 +30,11 @@ class Auto:
         if self.uzemanyag > 50:
             self.uzemanyag = 50
             print('Tele a tank.')
+
+    def utazik(self, tavolsag):
+        fogyasztott_uzemanyag = (tavolsag / 100) * self.fogyasztas
+        if fogyasztott_uzemanyag > self.uzemanyag:
+            print('Tankolj.')
+        else:
+            print(f'Fogyasztott üzemanyag: {fogyasztott_uzemanyag}')
+            self.uzemanyag -= fogyasztott_uzemanyag
